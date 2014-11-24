@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.5" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -126,13 +126,38 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="50" y2="0" width="0" layer="20"/>
-<wire x1="50" y1="0" x2="50" y2="50" width="0" layer="20"/>
-<wire x1="50" y1="50" x2="0" y2="50" width="0" layer="20"/>
-<wire x1="0" y1="50" x2="0" y2="0" width="0" layer="20"/>
-<text x="48.26" y="27.94" size="1.016" layer="21" font="vector" ratio="12" rot="R90">WIFI SHIELD V1.0</text>
+<wire x1="2.5" y1="0" x2="47.5" y2="0" width="0" layer="20"/>
+<wire x1="50" y1="2.5" x2="50" y2="43.5" width="0" layer="20"/>
+<wire x1="47.5" y1="46" x2="2.5" y2="46" width="0" layer="20"/>
+<text x="48.5" y="25" size="1.016" layer="21" font="vector" ratio="12" rot="R90">Wi-Fi board v1.0</text>
+<wire x1="0" y1="43.5" x2="0" y2="2.5" width="0" layer="20"/>
+<wire x1="50" y1="2.5" x2="47.5" y2="0" width="0" layer="20" curve="-90"/>
+<wire x1="2.5" y1="0" x2="0" y2="2.5" width="0" layer="20" curve="-90"/>
+<wire x1="47.5" y1="46" x2="50" y2="43.5" width="0" layer="20" curve="-90"/>
+<wire x1="0" y1="43.5" x2="2.5" y2="46" width="0" layer="20" curve="-90"/>
+<text x="11.5" y="8" size="0.8128" layer="21" rot="SR270">ON</text>
+<text x="11.5" y="3" size="0.8128" layer="21" rot="SR270">OFF</text>
+<text x="13.5" y="3.5" size="0.8128" layer="21" rot="SR270">GND</text>
+<text x="26" y="3.5" size="0.8128" layer="21" rot="SR270">GND</text>
+<text x="21" y="8.5" size="0.8128" layer="21" rot="SR270">GND</text>
+<text x="16.5" y="25" size="0.8128" layer="21" rot="SR270">GND</text>
+<text x="2.5" y="25" size="0.8128" layer="21" rot="SR270">GND</text>
+<text x="40.5" y="11.5" size="0.8128" layer="21" rot="SR270">GND</text>
 </plain>
 <libraries>
+<library name="custom">
+<packages>
+<package name="SPDT_SLIDE_SWITCH">
+<pad name="COMMON" x="0" y="0.1" drill="0.8" shape="long" rot="R90"/>
+<pad name="SW1" x="-2" y="-0.1" drill="0.8" shape="long" rot="R90"/>
+<pad name="SW2" x="2" y="-0.1" drill="0.8" shape="long" rot="R90"/>
+<wire x1="-4.3" y1="2.2" x2="4.6" y2="2.2" width="0.127" layer="21"/>
+<wire x1="4.6" y1="2.2" x2="4.6" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="4.6" y1="-2.2" x2="-4.3" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="-4.3" y1="-2.2" x2="-4.3" y2="2.2" width="0.127" layer="21"/>
+</package>
+</packages>
+</library>
 <library name="usr_wifi">
 <packages>
 <package name="WIFI_MODULE-T">
@@ -260,8 +285,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <wire x1="-1" y1="-1.75" x2="1" y2="-1.75" width="0.2032" layer="21"/>
 <wire x1="1" y1="-1.75" x2="1" y2="-2.25" width="0.2032" layer="21"/>
 <wire x1="-1" y1="-1.75" x2="-1" y2="-2.25" width="0.2032" layer="21"/>
-<pad name="1" x="-1" y="-0.55" drill="0.7" diameter="1.6"/>
-<pad name="2" x="1" y="-0.55" drill="0.7" diameter="1.6"/>
+<pad name="1" x="-1.127" y="-0.55" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="1.127" y="-0.55" drill="1.016" shape="long" rot="R90"/>
 <text x="-2.484" y="2.5" size="0.8" layer="25" font="vector">&gt;Name</text>
 <text x="2.016" y="3" size="0.4064" layer="27">&gt;Value</text>
 <text x="0.616" y="0.75" size="1.27" layer="51">+</text>
@@ -312,8 +337,8 @@ grid 2.032 mm, diameter 5 mm</description>
 <wire x1="-1.27" y1="1.778" x2="-0.762" y2="1.778" width="0.1524" layer="21"/>
 <wire x1="-1.016" y1="1.524" x2="-1.016" y2="2.032" width="0.1524" layer="21"/>
 <circle x="0" y="0" radius="2.54" width="0.1524" layer="21"/>
-<pad name="-" x="1.016" y="0" drill="0.8128" diameter="1.27" shape="offset"/>
-<pad name="+" x="-1" y="0" drill="0.8128" diameter="1.27" shape="offset" rot="R180"/>
+<pad name="-" x="1.016" y="0" drill="0.8128" diameter="1.27" shape="long" rot="R90"/>
+<pad name="+" x="-1" y="0" drill="0.8128" diameter="1.27" shape="long" rot="R90"/>
 <text x="2.54" y="1.016" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-4.159" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="0.254" y1="-1.016" x2="0.762" y2="1.016" layer="51"/>
@@ -428,10 +453,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </library>
 <library name="Sumorobot">
 <packages>
-<package name="ROBOKODING-LOGO-S">
-<description>&lt;b&gt;Robokoding logo small&lt;/b&gt;
-&lt;p&gt;
-Robokoding logo.</description>
+<package name="ROBOKODING-LOGO-M">
+<description>&lt;b&gt;Robokoding logo medium&lt;/b&gt;</description>
 <wire x1="2" y1="2" x2="1.5" y2="2.5" width="0.127" layer="21"/>
 <wire x1="1.5" y1="2.5" x2="0.16" y2="2.4" width="0.127" layer="21"/>
 <wire x1="0.16" y1="2.4" x2="0.25" y2="1" width="0.127" layer="21"/>
@@ -460,14 +483,14 @@ Robokoding logo.</description>
 <wire x1="1.75" y1="3" x2="6" y2="3" width="0.127" layer="21"/>
 <wire x1="6" y1="3" x2="6" y2="4.5" width="0.127" layer="21"/>
 <wire x1="6" y1="4.5" x2="1.75" y2="4.5" width="0.127" layer="21"/>
-<wire x1="2.5" y1="3.75" x2="2.5" y2="3.5" width="0.127" layer="21"/>
-<wire x1="2.5" y1="3.5" x2="2.75" y2="3.5" width="0.127" layer="21"/>
-<wire x1="2.75" y1="3.5" x2="2.75" y2="3.75" width="0.127" layer="21"/>
-<wire x1="2.75" y1="3.75" x2="2.5" y2="3.75" width="0.127" layer="21"/>
-<wire x1="4.75" y1="4" x2="4.75" y2="3.5" width="0.127" layer="21"/>
-<wire x1="4.75" y1="3.5" x2="5.25" y2="3.5" width="0.127" layer="21"/>
-<wire x1="5.25" y1="3.5" x2="5.25" y2="4" width="0.127" layer="21"/>
-<wire x1="5.25" y1="4" x2="4.75" y2="4" width="0.127" layer="21"/>
+<wire x1="2.5" y1="3.9" x2="2.5" y2="3.6" width="0.127" layer="21"/>
+<wire x1="2.5" y1="3.6" x2="2.8" y2="3.6" width="0.127" layer="21"/>
+<wire x1="2.8" y1="3.6" x2="2.8" y2="3.9" width="0.127" layer="21"/>
+<wire x1="2.8" y1="3.9" x2="2.5" y2="3.9" width="0.127" layer="21"/>
+<wire x1="4.7" y1="4" x2="4.7" y2="3.5" width="0.127" layer="21"/>
+<wire x1="4.7" y1="3.5" x2="5.2" y2="3.5" width="0.127" layer="21"/>
+<wire x1="5.2" y1="3.5" x2="5.2" y2="4" width="0.127" layer="21"/>
+<wire x1="5.2" y1="4" x2="4.7" y2="4" width="0.127" layer="21"/>
 <wire x1="1.75" y1="2.75" x2="2.5" y2="2" width="0.127" layer="21"/>
 <wire x1="2.5" y1="2" x2="5.25" y2="2" width="0.127" layer="21"/>
 <wire x1="5.25" y1="2" x2="6" y2="2.75" width="0.127" layer="21"/>
@@ -594,20 +617,32 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="dirt_cheap_dirty_boards.v1">
-<description language="en">&lt;b&gt;Dirty Cheap Dirty Board Design Rules&lt;/b&gt;
-&lt;br&gt;
-&lt;br&gt;Min width/Spacing: 5/5mil
-&lt;br&gt;Min diameter of finished hole 12mil</description>
+<designrules name="SeeedStudio_2layer_DRU_no_angle_20140221">
+<description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+&lt;p&gt;
+Die Standard-Design-Rules sind so gewählt, dass sie für 
+die meisten Anwendungen passen. Sollte ihre Platine 
+besondere Anforderungen haben, treffen Sie die erforderlichen
+Einstellungen hier und speichern die Design Rules unter 
+einem neuen Namen ab.</description>
+<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+&lt;p&gt;
+The default Design Rules have been set to cover
+a wide range of applications. Your particular design
+may have different requirements, so please make the
+necessary adjustments and save your customized
+design rules under a new name.</description>
+<description language="zh">&lt;b&gt;Seeed Studio EAGLE Design Rules&lt;/b&gt;
+</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.0175mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.0175mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 1.1mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="5mil"/>
-<param name="mdWirePad" value="5mil"/>
-<param name="mdWireVia" value="5mil"/>
-<param name="mdPadPad" value="5mil"/>
-<param name="mdPadVia" value="5mil"/>
-<param name="mdViaVia" value="5mil"/>
+<param name="mdWireWire" value="6mil"/>
+<param name="mdWirePad" value="6mil"/>
+<param name="mdWireVia" value="6mil"/>
+<param name="mdPadPad" value="6mil"/>
+<param name="mdPadVia" value="6mil"/>
+<param name="mdViaVia" value="6mil"/>
 <param name="mdSmdPad" value="0mil"/>
 <param name="mdSmdVia" value="0mil"/>
 <param name="mdSmdSmd" value="0mil"/>
@@ -616,7 +651,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <param name="mdCopperDimension" value="10mil"/>
 <param name="mdDrill" value="10mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="5mil"/>
+<param name="msWidth" value="6mil"/>
 <param name="msDrill" value="12mil"/>
 <param name="msMicroVia" value="12mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
@@ -652,7 +687,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <param name="mlMaxStopFrame" value="2mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="25mil"/>
+<param name="mlViaStopLimit" value="100mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -764,118 +799,121 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </pass>
 </autorouter>
 <elements>
-<element name="WIFI_MODULE" library="usr_wifi" package="WIFI_MODULE-T" value="" x="36.83" y="39.37" rot="R270"/>
-<element name="CONVERTER" library="SparkFun-Connectors" package="1X03_LOCK_LONGPADS" value="" x="8.89" y="11.43"/>
-<element name="LEFT_SERVO" library="SparkFun-Connectors" package="1X03_LOCK_LONGPADS" value="" x="11.43" y="2.54"/>
-<element name="RIGHT_SERVO" library="SparkFun-Connectors" package="1X03_LOCK_LONGPADS" value="" x="25.4" y="2.54"/>
-<element name="LEFT_LINE" library="SparkFun-Connectors" package="1X04_LOCK_LONGPADS" value="" x="5.08" y="26.67"/>
-<element name="RIGHT_LINE" library="SparkFun-Connectors" package="1X04_LOCK_LONGPADS" value="" x="19.05" y="26.67"/>
-<element name="PROXIMITY" library="SparkFun-Connectors" package="1X04_LOCK_LONGPADS" value="" x="20.32" y="7.62"/>
-<element name="SPEAKER" library="SparkFun-Connectors" package="1X02_LOCK_LONGPADS" value="" x="41.91" y="12.7"/>
-<element name="R1" library="Child-Friendly-Parts" package="0204/5" value="1K8" x="27.94" y="15.24" rot="R90"/>
-<element name="R2" library="Child-Friendly-Parts" package="0204/5" value="3K3" x="22.86" y="15.24" rot="R270"/>
-<element name="C1" library="Child-Friendly-Parts" package="E2-5" value="2.2uF" x="36.83" y="24.13"/>
-<element name="D1" library="diode" package="DO35Z10" value="3V" x="38.1" y="7.62" rot="R270"/>
-<element name="R3" library="Child-Friendly-Parts" package="0204/5" value="100" x="46.99" y="20.32" rot="R270"/>
-<element name="R4" library="Child-Friendly-Parts" package="0204/5" value="1M" x="41.91" y="20.32" rot="R270"/>
-<element name="ARDUINO" library="SparkFun-Boards" package="ARDUINO_PRO_MINI" value="" x="17.78" y="40.64" rot="R90"/>
-<element name="R5" library="Child-Friendly-Parts" package="0204/5" value="10K" x="11.43" y="20.32" rot="R90"/>
-<element name="R6" library="Child-Friendly-Parts" package="0204/5" value="220" x="6.35" y="20.32" rot="R270"/>
-<element name="R7" library="Child-Friendly-Parts" package="0204/5" value="10K" x="25.4" y="20.32" rot="R90"/>
-<element name="R8" library="Child-Friendly-Parts" package="0204/5" value="220" x="20.32" y="20.32" rot="R270"/>
-<element name="BATTERY" library="SparkFun-Connectors" package="JST-2-PTH-VERT" value="" x="3.81" y="12.7"/>
-<element name="U$1" library="holes" package="3,0" value="" x="45" y="5"/>
-<element name="U$2" library="holes" package="3,0" value="" x="45" y="45"/>
-<element name="U$3" library="holes" package="3,0" value="" x="5" y="5"/>
-<element name="U$4" library="Sumorobot" package="ROBOKODING-LOGO-S" value="" x="45.72" y="33.02" rot="R90"/>
-<element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-M" value="OSHW-LOGOM" x="44.45" y="30.48" rot="R90"/>
+<element name="WIFI_MODULE" library="usr_wifi" package="WIFI_MODULE-T" value="" x="37" y="36" rot="R270"/>
+<element name="CONVERTER" library="SparkFun-Connectors" package="1X03_LOCK_LONGPADS" value="" x="11.5" y="10.75"/>
+<element name="L-SERVO" library="SparkFun-Connectors" package="1X03_LOCK_LONGPADS" value="" x="16" y="2.25"/>
+<element name="R-SERVO" library="SparkFun-Connectors" package="1X03_LOCK_LONGPADS" value="" x="28.5" y="2.25"/>
+<element name="L-LINE" library="SparkFun-Connectors" package="1X04_LOCK_LONGPADS" value="" x="5" y="24"/>
+<element name="R-LINE" library="SparkFun-Connectors" package="1X04_LOCK_LONGPADS" value="" x="19.05" y="23.94"/>
+<element name="PROXIMITY" library="SparkFun-Connectors" package="1X04_LOCK_LONGPADS" value="" x="23.5" y="7.35"/>
+<element name="SPEAKER" library="SparkFun-Connectors" package="1X02_LOCK_LONGPADS" value="" x="43" y="10.5"/>
+<element name="R1" library="Child-Friendly-Parts" package="0204/5" value="1K8" x="29" y="14.5" rot="R90"/>
+<element name="R2" library="Child-Friendly-Parts" package="0204/5" value="3K3" x="23" y="14.5" rot="R270"/>
+<element name="C1" library="Child-Friendly-Parts" package="E2-5" value="2.2uF" x="37" y="20"/>
+<element name="D1" library="diode" package="DO35Z10" value="3V" x="37.25" y="7" rot="R270"/>
+<element name="R3" library="Child-Friendly-Parts" package="0204/5" value="100" x="42.5" y="18" rot="R270"/>
+<element name="R4" library="Child-Friendly-Parts" package="0204/5" value="1M" x="47.5" y="18" rot="R270"/>
+<element name="ARDUINO" library="SparkFun-Boards" package="ARDUINO_PRO_MINI" value="" x="18" y="36.5" rot="R90"/>
+<element name="R5" library="Child-Friendly-Parts" package="0204/5" value="10K" x="11.5" y="18" rot="R90"/>
+<element name="R6" library="Child-Friendly-Parts" package="0204/5" value="220" x="6" y="18" rot="R270"/>
+<element name="R7" library="Child-Friendly-Parts" package="0204/5" value="10K" x="26" y="18" rot="R90"/>
+<element name="R8" library="Child-Friendly-Parts" package="0204/5" value="220" x="20" y="18" rot="R270"/>
+<element name="BATTERY" library="SparkFun-Connectors" package="JST-2-PTH-VERT" value="" x="3.5" y="8"/>
+<element name="U$1" library="holes" package="3,0" value="" x="47.5" y="2.5"/>
+<element name="U$2" library="holes" package="3,0" value="" x="47.5" y="43.5"/>
+<element name="U$3" library="holes" package="3,0" value="" x="2.5" y="2.5"/>
+<element name="LOGO1" library="SparkFun-Aesthetics" package="OSHW-LOGO-M" value="OSHW-LOGOM" x="44" y="27.5" rot="R90"/>
+<element name="LOGO2" library="Sumorobot" package="ROBOKODING-LOGO-M" value="ROBOKODING-LOGOM" x="46" y="31" rot="R90"/>
+<element name="POWER" library="custom" package="SPDT_SLIDE_SWITCH" value="SPDT_SLIDE_SWITCH" x="9" y="4.5" rot="R90"/>
+<element name="U$4" library="holes" package="3,0" value="" x="2.5" y="43.5"/>
 </elements>
 <signals>
 <signal name="D2">
 <contactref element="R1" pad="2"/>
 <contactref element="R2" pad="1"/>
 <contactref element="ARDUINO" pad="5"/>
-<wire x1="22.86" y1="17.78" x2="22.86" y2="19.05" width="0.4064" layer="16"/>
-<wire x1="22.86" y1="19.05" x2="24.13" y2="20.32" width="0.4064" layer="16"/>
-<wire x1="24.13" y1="20.32" x2="29.21" y2="20.32" width="0.4064" layer="16"/>
-<wire x1="29.21" y1="20.32" x2="30.48" y2="20.32" width="0.4064" layer="16"/>
-<wire x1="30.48" y1="20.32" x2="31.75" y2="21.59" width="0.4064" layer="16"/>
-<wire x1="31.75" y1="21.59" x2="31.75" y2="34.29" width="0.4064" layer="16"/>
-<wire x1="31.75" y1="34.29" x2="30.48" y2="35.56" width="0.4064" layer="16"/>
-<wire x1="30.48" y1="35.56" x2="29.21" y2="34.29" width="0.4064" layer="16"/>
-<wire x1="29.21" y1="34.29" x2="29.21" y2="31.75" width="0.4064" layer="16"/>
-<wire x1="29.21" y1="31.75" x2="27.94" y2="30.48" width="0.4064" layer="16"/>
-<wire x1="27.94" y1="30.48" x2="16.51" y2="30.48" width="0.4064" layer="16"/>
-<wire x1="16.51" y1="30.48" x2="15.24" y2="31.75" width="0.4064" layer="16"/>
-<wire x1="15.24" y1="31.75" x2="15.24" y2="33.12" width="0.4064" layer="16"/>
-<wire x1="27.94" y1="17.78" x2="27.94" y2="19.05" width="0.4064" layer="16"/>
-<wire x1="27.94" y1="19.05" x2="29.21" y2="20.32" width="0.4064" layer="16"/>
+<wire x1="23" y1="17.04" x2="23" y2="18" width="0.4064" layer="16"/>
+<wire x1="23" y1="18" x2="23.5" y2="18.5" width="0.4064" layer="16"/>
+<wire x1="23.5" y1="18.5" x2="29.5" y2="18.5" width="0.4064" layer="16"/>
+<wire x1="29.5" y1="18.5" x2="31" y2="18.5" width="0.4064" layer="16"/>
+<wire x1="31" y1="18.5" x2="32" y2="19.5" width="0.4064" layer="16"/>
+<wire x1="32" y1="19.5" x2="32" y2="30.5" width="0.4064" layer="16"/>
+<wire x1="32" y1="30.5" x2="31.5" y2="31" width="0.4064" layer="16"/>
+<wire x1="31.5" y1="31" x2="30" y2="31" width="0.4064" layer="16"/>
+<wire x1="30" y1="31" x2="29.5" y2="30.5" width="0.4064" layer="16"/>
+<wire x1="29.5" y1="30.5" x2="29.5" y2="27.5" width="0.4064" layer="16"/>
+<wire x1="29.5" y1="27.5" x2="28.5" y2="26.5" width="0.4064" layer="16"/>
+<wire x1="28.5" y1="26.5" x2="16.51" y2="26.48" width="0.4064" layer="16"/>
+<wire x1="16.51" y1="26.48" x2="15.5" y2="27.5" width="0.4064" layer="16"/>
+<wire x1="15.5" y1="27.5" x2="15.46" y2="27.54" width="0.4064" layer="16"/>
+<wire x1="15.46" y1="27.54" x2="15.46" y2="28.98" width="0.4064" layer="16"/>
+<wire x1="29" y1="17.04" x2="29" y2="18" width="0.4064" layer="16"/>
+<wire x1="29" y1="18" x2="29.5" y2="18.5" width="0.4064" layer="16"/>
 </signal>
 <signal name="D4">
 <contactref element="ARDUINO" pad="7"/>
 <contactref element="PROXIMITY" pad="3"/>
-<wire x1="25.4" y1="7.62" x2="25.4" y2="8.89" width="0.4064" layer="1"/>
-<wire x1="25.4" y1="8.89" x2="24.13" y2="10.16" width="0.4064" layer="1"/>
-<wire x1="24.13" y1="10.16" x2="20.32" y2="10.16" width="0.4064" layer="1"/>
-<wire x1="20.32" y1="10.16" x2="16.51" y2="13.97" width="0.4064" layer="1"/>
-<wire x1="16.51" y1="13.97" x2="16.51" y2="27.94" width="0.4064" layer="1"/>
-<wire x1="16.51" y1="27.94" x2="20.32" y2="31.75" width="0.4064" layer="1"/>
-<wire x1="20.32" y1="31.75" x2="20.32" y2="33.12" width="0.4064" layer="1"/>
+<wire x1="28.58" y1="7.35" x2="28.5" y2="9" width="0.4064" layer="1"/>
+<wire x1="28.5" y1="9" x2="27.5" y2="10" width="0.4064" layer="1"/>
+<wire x1="22" y1="10" x2="16.5" y2="15.5" width="0.4064" layer="1"/>
+<wire x1="16.5" y1="15.5" x2="16.51" y2="24.47" width="0.4064" layer="1"/>
+<wire x1="16.51" y1="24.47" x2="17" y2="25" width="0.4064" layer="1"/>
+<wire x1="17" y1="25" x2="20.54" y2="28.54" width="0.4064" layer="1"/>
+<wire x1="20.54" y1="28.54" x2="20.54" y2="28.98" width="0.4064" layer="1"/>
+<wire x1="22" y1="10" x2="27.5" y2="10" width="0.4064" layer="1"/>
 </signal>
 <signal name="D5">
-<contactref element="LEFT_SERVO" pad="3"/>
+<contactref element="L-SERVO" pad="3"/>
 <contactref element="ARDUINO" pad="8"/>
-<wire x1="16.51" y1="2.54" x2="16.51" y2="12.7" width="0.4064" layer="1"/>
-<wire x1="16.51" y1="12.7" x2="15.24" y2="13.97" width="0.4064" layer="1"/>
-<wire x1="15.24" y1="13.97" x2="15.24" y2="27.94" width="0.4064" layer="1"/>
-<wire x1="15.24" y1="27.94" x2="19.05" y2="31.75" width="0.4064" layer="1"/>
-<wire x1="19.05" y1="31.75" x2="19.05" y2="34.29" width="0.4064" layer="1"/>
-<wire x1="19.05" y1="34.29" x2="20.32" y2="35.56" width="0.4064" layer="1"/>
-<wire x1="20.32" y1="35.56" x2="21.59" y2="35.56" width="0.4064" layer="1"/>
-<wire x1="21.59" y1="35.56" x2="22.86" y2="34.29" width="0.4064" layer="1"/>
-<wire x1="22.86" y1="34.29" x2="22.86" y2="32.92" width="0.4064" layer="1"/>
+<wire x1="21.08" y1="2.25" x2="19" y2="4" width="0.4064" layer="1"/>
+<wire x1="19" y1="4" x2="19" y2="11.25" width="0.4064" layer="1"/>
+<wire x1="19" y1="11.25" x2="15.25" y2="15" width="0.4064" layer="1"/>
+<wire x1="15.25" y1="15" x2="15.25" y2="25" width="0.4064" layer="1"/>
+<wire x1="15.25" y1="25" x2="16.75" y2="26.5" width="0.4064" layer="1"/>
+<wire x1="16.75" y1="26.5" x2="16.75" y2="32" width="0.4064" layer="1"/>
+<wire x1="16.75" y1="32" x2="18" y2="33.25" width="0.4064" layer="1"/>
+<wire x1="18" y1="33.25" x2="19.75" y2="33.25" width="0.4064" layer="1"/>
+<wire x1="19.75" y1="33.25" x2="23.08" y2="29.92" width="0.4064" layer="1"/>
+<wire x1="23.08" y1="29.92" x2="23.08" y2="28.78" width="0.4064" layer="1"/>
 </signal>
 <signal name="D6">
-<contactref element="RIGHT_SERVO" pad="3"/>
+<contactref element="R-SERVO" pad="3"/>
 <contactref element="ARDUINO" pad="9"/>
-<wire x1="30.48" y1="2.54" x2="30.48" y2="3.81" width="0.4064" layer="1"/>
-<wire x1="30.48" y1="3.81" x2="33.02" y2="6.35" width="0.4064" layer="1"/>
-<wire x1="33.02" y1="6.35" x2="33.02" y2="17.78" width="0.4064" layer="1"/>
-<wire x1="33.02" y1="17.78" x2="29.21" y2="21.59" width="0.4064" layer="1"/>
-<wire x1="29.21" y1="21.59" x2="29.21" y2="27.94" width="0.4064" layer="1"/>
-<wire x1="29.21" y1="27.94" x2="25.4" y2="31.75" width="0.4064" layer="1"/>
-<wire x1="25.4" y1="31.75" x2="25.4" y2="33.12" width="0.4064" layer="1"/>
+<wire x1="33.58" y1="2.25" x2="33.5" y2="2.25" width="0.4064" layer="1"/>
+<wire x1="33.5" y1="2.25" x2="33.5" y2="16" width="0.4064" layer="1"/>
+<wire x1="33.5" y1="16" x2="30.5" y2="19" width="0.4064" layer="1"/>
+<wire x1="30.5" y1="19" x2="30.5" y2="23" width="0.4064" layer="1"/>
+<wire x1="25.62" y1="27.88" x2="30.5" y2="23" width="0.4064" layer="1"/>
+<wire x1="25.62" y1="27.88" x2="25.62" y2="28.98" width="0.4064" layer="1"/>
 </signal>
 <signal name="D7">
 <contactref element="ARDUINO" pad="10"/>
-<contactref element="LEFT_LINE" pad="4"/>
-<wire x1="12.7" y1="26.416" x2="12.7" y2="29.21" width="0.4064" layer="16"/>
-<wire x1="12.7" y1="29.21" x2="13.97" y2="30.48" width="0.4064" layer="16"/>
-<wire x1="13.97" y1="30.48" x2="13.97" y2="34.29" width="0.4064" layer="16"/>
-<wire x1="13.97" y1="34.29" x2="15.24" y2="35.56" width="0.4064" layer="16"/>
-<wire x1="15.24" y1="35.56" x2="26.67" y2="35.56" width="0.4064" layer="16"/>
-<wire x1="26.67" y1="35.56" x2="27.94" y2="34.29" width="0.4064" layer="16"/>
-<wire x1="27.94" y1="34.29" x2="27.94" y2="32.92" width="0.4064" layer="16"/>
+<contactref element="L-LINE" pad="4"/>
+<wire x1="12.62" y1="23.746" x2="12.62" y2="25.37" width="0.4064" layer="16"/>
+<wire x1="12.62" y1="25.37" x2="12.75" y2="25.5" width="0.4064" layer="16"/>
+<wire x1="12.75" y1="25.5" x2="14.25" y2="26.5" width="0.4064" layer="16"/>
+<wire x1="14.25" y1="26.5" x2="14.25" y2="30.5" width="0.4064" layer="16"/>
+<wire x1="14.25" y1="30.5" x2="14.75" y2="31" width="0.4064" layer="16"/>
+<wire x1="14.75" y1="31" x2="27" y2="31" width="0.4064" layer="16"/>
+<wire x1="27" y1="31" x2="28.16" y2="29.84" width="0.4064" layer="16"/>
+<wire x1="28.16" y1="29.84" x2="28.16" y2="28.78" width="0.4064" layer="16"/>
 </signal>
 <signal name="D8">
 <contactref element="ARDUINO" pad="11"/>
-<contactref element="RIGHT_LINE" pad="4"/>
-<wire x1="30.48" y1="33.12" x2="30.48" y2="31.75" width="0.4064" layer="16"/>
-<wire x1="30.48" y1="31.75" x2="26.67" y2="27.94" width="0.4064" layer="16"/>
-<wire x1="26.67" y1="27.94" x2="26.67" y2="26.416" width="0.4064" layer="16"/>
+<contactref element="R-LINE" pad="4"/>
+<wire x1="30.7" y1="28.98" x2="30.7" y2="26.716" width="0.4064" layer="16"/>
+<wire x1="30.7" y1="26.716" x2="30.5" y2="26.5" width="0.4064" layer="16"/>
+<wire x1="30.5" y1="26.5" x2="27.686" y2="23.686" width="0.4064" layer="16"/>
+<wire x1="27.686" y1="23.686" x2="26.67" y2="23.686" width="0.4064" layer="16"/>
 </signal>
 <signal name="D9">
 <contactref element="R3" pad="1"/>
 <contactref element="ARDUINO" pad="12"/>
-<wire x1="33.02" y1="32.92" x2="33.02" y2="22.86" width="0.4064" layer="16"/>
-<wire x1="33.02" y1="22.86" x2="35.56" y2="20.32" width="0.4064" layer="16"/>
-<wire x1="35.56" y1="20.32" x2="38.1" y2="20.32" width="0.4064" layer="16"/>
-<wire x1="38.1" y1="20.32" x2="40.64" y2="22.86" width="0.4064" layer="16"/>
-<wire x1="40.64" y1="22.86" x2="40.64" y2="24.13" width="0.4064" layer="16"/>
-<wire x1="40.64" y1="24.13" x2="41.91" y2="25.4" width="0.4064" layer="16"/>
-<wire x1="41.91" y1="25.4" x2="45.72" y2="25.4" width="0.4064" layer="16"/>
-<wire x1="45.72" y1="25.4" x2="46.99" y2="24.13" width="0.4064" layer="16"/>
-<wire x1="46.99" y1="24.13" x2="46.99" y2="22.86" width="0.4064" layer="16"/>
+<wire x1="33.24" y1="28.78" x2="33.24" y2="19.26" width="0.4064" layer="16"/>
+<wire x1="33.24" y1="19.26" x2="34.5" y2="18" width="0.4064" layer="16"/>
+<wire x1="34.5" y1="18" x2="39" y2="18" width="0.4064" layer="16"/>
+<wire x1="39" y1="18" x2="41.5" y2="20.5" width="0.4064" layer="16"/>
+<wire x1="41.5" y1="20.5" x2="42.5" y2="20.54" width="0.4064" layer="16"/>
 </signal>
 <signal name="A0">
 <contactref element="ARDUINO" pad="17"/>
@@ -883,68 +921,66 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <contactref element="R4" pad="1"/>
 <contactref element="D1" pad="C"/>
 <contactref element="SPEAKER" pad="2"/>
-<wire x1="22.86" y1="48.16" x2="22.86" y2="46.99" width="0.4064" layer="1"/>
-<wire x1="22.86" y1="46.99" x2="31.75" y2="38.1" width="0.4064" layer="1"/>
-<wire x1="31.75" y1="38.1" x2="31.75" y2="21.59" width="0.4064" layer="1"/>
-<wire x1="31.75" y1="21.59" x2="38.1" y2="15.24" width="0.4064" layer="1"/>
-<wire x1="38.1" y1="15.24" x2="38.1" y2="12.7" width="0.4064" layer="1"/>
-<wire x1="41.91" y1="22.86" x2="46.99" y2="17.78" width="0.4064" layer="16"/>
-<wire x1="38.1" y1="12.7" x2="38.1" y2="13.97" width="0.4064" layer="16"/>
-<wire x1="38.1" y1="13.97" x2="39.37" y2="15.24" width="0.4064" layer="16"/>
-<wire x1="39.37" y1="15.24" x2="43.18" y2="15.24" width="0.4064" layer="16"/>
-<wire x1="43.18" y1="15.24" x2="44.45" y2="13.97" width="0.4064" layer="16"/>
-<wire x1="44.45" y1="13.97" x2="44.45" y2="12.827" width="0.4064" layer="16"/>
-<wire x1="44.45" y1="12.7" x2="44.45" y2="12.827" width="0.4064" layer="16"/>
-<wire x1="44.45" y1="12.827" x2="44.577" y2="12.7" width="0.4064" layer="16"/>
-<wire x1="46.99" y1="17.78" x2="46.99" y2="15.24" width="0.4064" layer="16"/>
-<wire x1="46.99" y1="15.24" x2="44.45" y2="12.7" width="0.4064" layer="16"/>
+<wire x1="23.08" y1="44.02" x2="23.08" y2="43.08" width="0.4064" layer="1"/>
+<wire x1="23.08" y1="43.08" x2="32" y2="34" width="0.4064" layer="1"/>
+<wire x1="32" y1="34" x2="32" y2="19.5" width="0.4064" layer="1"/>
+<wire x1="32" y1="19.5" x2="37.25" y2="14.25" width="0.4064" layer="1"/>
+<wire x1="37.25" y1="14.25" x2="37.25" y2="12.08" width="0.4064" layer="1"/>
+<wire x1="47.5" y1="20.54" x2="42.5" y2="15.46" width="0.4064" layer="16"/>
+<wire x1="45.667" y1="10.5" x2="45.667" y2="11.833" width="0.4064" layer="16"/>
+<wire x1="45.667" y1="11.833" x2="44.5" y2="13" width="0.4064" layer="16"/>
+<wire x1="44.5" y1="13" x2="38.17" y2="13" width="0.4064" layer="16"/>
+<wire x1="38.17" y1="13" x2="37.25" y2="12.08" width="0.4064" layer="16"/>
+<wire x1="42.5" y1="15.46" x2="42.5" y2="15" width="0.4064" layer="16"/>
+<wire x1="42.5" y1="15" x2="44.5" y2="13" width="0.4064" layer="16"/>
 </signal>
 <signal name="A1">
 <contactref element="ARDUINO" pad="18"/>
 <contactref element="R7" pad="2"/>
-<contactref element="RIGHT_LINE" pad="3"/>
-<wire x1="24.13" y1="26.67" x2="24.13" y2="43.18" width="0.4064" layer="1"/>
-<wire x1="24.13" y1="43.18" x2="20.32" y2="46.99" width="0.4064" layer="1"/>
-<wire x1="20.32" y1="46.99" x2="20.32" y2="48.36" width="0.4064" layer="1"/>
-<wire x1="24.13" y1="26.67" x2="24.13" y2="24.13" width="0.8128" layer="16"/>
-<wire x1="24.13" y1="24.13" x2="25.4" y2="22.86" width="0.8128" layer="16"/>
+<contactref element="R-LINE" pad="3"/>
+<wire x1="24.13" y1="23.94" x2="24.13" y2="39.37" width="0.4064" layer="1"/>
+<wire x1="24.13" y1="39.37" x2="24" y2="39.5" width="0.4064" layer="1"/>
+<wire x1="24" y1="39.5" x2="20.54" y2="43.04" width="0.4064" layer="1"/>
+<wire x1="20.54" y1="43.04" x2="20.54" y2="44.22" width="0.4064" layer="1"/>
+<wire x1="24.13" y1="23.94" x2="24.13" y2="22.4" width="0.8128" layer="16"/>
+<wire x1="24.13" y1="22.4" x2="26" y2="20.54" width="0.8128" layer="16"/>
 </signal>
 <signal name="VIN">
 <contactref element="CONVERTER" pad="1"/>
 <contactref element="ARDUINO" pad="24"/>
-<wire x1="5.08" y1="48.36" x2="3.91" y2="48.36" width="0.8128" layer="16"/>
-<wire x1="3.91" y1="48.36" x2="2.54" y2="46.99" width="0.8128" layer="16"/>
-<wire x1="2.54" y1="46.99" x2="2.54" y2="16.51" width="0.8128" layer="16"/>
-<wire x1="2.54" y1="16.51" x2="4.81" y2="14.24" width="0.8128" layer="16"/>
-<wire x1="7.62" y1="11.43" x2="8.89" y2="11.43" width="0.8128" layer="16"/>
-<contactref element="BATTERY" pad="2"/>
-<wire x1="4.81" y1="12.15" x2="4.81" y2="14.24" width="0.8128" layer="16"/>
-<wire x1="4.81" y1="14.24" x2="7.62" y2="11.43" width="0.8128" layer="16"/>
+<wire x1="5.3" y1="44.22" x2="5.25" y2="41.75" width="0.8128" layer="16"/>
+<wire x1="5.25" y1="41.75" x2="3" y2="39" width="0.8128" layer="16"/>
+<wire x1="3" y1="39" x2="3" y2="14.5" width="0.8128" layer="16"/>
+<wire x1="6.75" y1="10.75" x2="11.5" y2="10.75" width="0.8128" layer="16"/>
+<wire x1="3" y1="14.5" x2="6.75" y2="10.75" width="0.8128" layer="16"/>
+<contactref element="POWER" pad="SW2"/>
+<wire x1="11.5" y1="10.75" x2="11.5" y2="9" width="0.8128" layer="16"/>
+<wire x1="11.5" y1="9" x2="9" y2="6.5" width="0.8128" layer="16"/>
+<wire x1="9" y1="6.5" x2="9.1" y2="6.5" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="+3V3">
 <contactref element="WIFI_MODULE" pad="+3V3"/>
 <contactref element="ARDUINO" pad="21"/>
-<wire x1="36.73" y1="45.37" x2="14.32" y2="45.37" width="0.8128" layer="16"/>
-<wire x1="14.32" y1="45.37" x2="12.7" y2="46.99" width="0.8128" layer="16"/>
-<wire x1="12.7" y1="46.99" x2="12.7" y2="48.16" width="0.8128" layer="16"/>
+<wire x1="36.9" y1="42" x2="14" y2="42" width="0.8128" layer="16"/>
+<wire x1="14" y1="42" x2="13" y2="43" width="0.8128" layer="16"/>
+<wire x1="13" y1="43" x2="12.92" y2="44.02" width="0.8128" layer="16"/>
 </signal>
 <signal name="RST">
 <contactref element="C1" pad="+"/>
-<contactref element="ARDUINO" pad="3"/>
 <contactref element="ARDUINO" pad="22"/>
-<wire x1="10.16" y1="33.12" x2="10.16" y2="35.56" width="0.4064" layer="16"/>
-<wire x1="10.16" y1="35.56" x2="11.43" y2="36.83" width="0.4064" layer="16"/>
-<wire x1="11.43" y1="36.83" x2="33.02" y2="36.83" width="0.4064" layer="16"/>
-<wire x1="33.02" y1="36.83" x2="34.29" y2="35.56" width="0.4064" layer="16"/>
-<wire x1="34.29" y1="35.56" x2="34.29" y2="25.67" width="0.4064" layer="16"/>
-<wire x1="34.29" y1="25.67" x2="35.83" y2="24.13" width="0.4064" layer="16"/>
-<wire x1="10.16" y1="48.36" x2="10.16" y2="33.12" width="0.4064" layer="1"/>
+<wire x1="12" y1="33" x2="33.5" y2="33" width="0.4064" layer="16"/>
+<wire x1="33.5" y1="33" x2="34.5" y2="32" width="0.4064" layer="16"/>
+<wire x1="34.5" y1="32" x2="34.5" y2="21.5" width="0.4064" layer="16"/>
+<wire x1="34.5" y1="21.5" x2="36" y2="20" width="0.4064" layer="16"/>
+<via x="12" y="33" extent="1-16" drill="0.6"/>
+<wire x1="12" y1="33" x2="10.38" y2="34.62" width="0.4064" layer="1"/>
+<wire x1="10.38" y1="34.62" x2="10.38" y2="44.22" width="0.4064" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="WIFI_MODULE" pad="GND"/>
 <contactref element="CONVERTER" pad="2"/>
-<contactref element="LEFT_SERVO" pad="1"/>
-<contactref element="RIGHT_SERVO" pad="1"/>
+<contactref element="L-SERVO" pad="1"/>
+<contactref element="R-SERVO" pad="1"/>
 <contactref element="PROXIMITY" pad="1"/>
 <contactref element="SPEAKER" pad="1"/>
 <contactref element="R2" pad="2"/>
@@ -954,17 +990,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <contactref element="ARDUINO" pad="23"/>
 <contactref element="R7" pad="1"/>
 <contactref element="R5" pad="1"/>
-<contactref element="RIGHT_LINE" pad="1"/>
-<contactref element="LEFT_LINE" pad="1"/>
+<contactref element="R-LINE" pad="1"/>
+<contactref element="L-LINE" pad="1"/>
 <polygon width="0.4064" layer="1" isolate="0.8128" orphans="yes">
-<vertex x="1" y="49"/>
-<vertex x="49" y="49"/>
-<vertex x="49" y="1"/>
-<vertex x="1" y="1"/>
+<vertex x="-0.5" y="46.5"/>
+<vertex x="50.5" y="46.5"/>
+<vertex x="50.5" y="-0.5"/>
+<vertex x="-0.5" y="-0.5"/>
 </polygon>
 <polygon width="0.4064" layer="16" isolate="0.8128" orphans="yes">
-<vertex x="0" y="50"/>
-<vertex x="50" y="50"/>
+<vertex x="0" y="46"/>
+<vertex x="50" y="46"/>
 <vertex x="50" y="0"/>
 <vertex x="0" y="0"/>
 </polygon>
@@ -973,101 +1009,111 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <signal name="TXD">
 <contactref element="WIFI_MODULE" pad="RX"/>
 <contactref element="ARDUINO" pad="1"/>
-<wire x1="5.08" y1="33.12" x2="5.08" y2="35.56" width="0.4064" layer="16"/>
-<wire x1="5.08" y1="35.56" x2="8.89" y2="39.37" width="0.4064" layer="16"/>
-<wire x1="8.89" y1="39.37" x2="36.93" y2="39.37" width="0.4064" layer="16"/>
+<wire x1="5.3" y1="28.98" x2="5.3" y2="30.3" width="0.4064" layer="16"/>
+<wire x1="5.3" y1="30.3" x2="11" y2="36" width="0.4064" layer="16"/>
+<wire x1="11" y1="36" x2="37.1" y2="36" width="0.4064" layer="16"/>
 </signal>
 <signal name="RXD">
 <contactref element="WIFI_MODULE" pad="TX"/>
 <contactref element="ARDUINO" pad="2"/>
-<wire x1="7.62" y1="32.92" x2="7.62" y2="35.56" width="0.4064" layer="16"/>
-<wire x1="7.62" y1="35.56" x2="10.16" y2="38.1" width="0.4064" layer="16"/>
-<wire x1="10.16" y1="38.1" x2="36" y2="38.1" width="0.4064" layer="16"/>
-<wire x1="36" y1="38.1" x2="36.73" y2="37.37" width="0.4064" layer="16"/>
+<wire x1="7.84" y1="28.78" x2="7.84" y2="30.84" width="0.4064" layer="16"/>
+<wire x1="7.84" y1="30.84" x2="11" y2="34" width="0.4064" layer="16"/>
+<wire x1="11" y1="34" x2="36.9" y2="34" width="0.4064" layer="16"/>
 </signal>
 <signal name="+5V">
 <contactref element="CONVERTER" pad="3"/>
-<contactref element="LEFT_SERVO" pad="2"/>
-<contactref element="RIGHT_SERVO" pad="2"/>
+<contactref element="L-SERVO" pad="2"/>
+<contactref element="R-SERVO" pad="2"/>
 <contactref element="PROXIMITY" pad="4"/>
 <contactref element="R6" pad="2"/>
 <contactref element="R8" pad="2"/>
-<wire x1="13.97" y1="11.43" x2="13.97" y2="12.7" width="0.8128" layer="16"/>
-<wire x1="13.97" y1="12.7" x2="11.43" y2="15.24" width="0.8128" layer="16"/>
-<wire x1="11.43" y1="15.24" x2="7.62" y2="15.24" width="0.8128" layer="16"/>
-<wire x1="7.62" y1="15.24" x2="6.35" y2="16.51" width="0.8128" layer="16"/>
-<wire x1="6.35" y1="16.51" x2="6.35" y2="17.78" width="0.8128" layer="16"/>
-<wire x1="20.32" y1="17.78" x2="13.97" y2="11.43" width="0.8128" layer="16"/>
-<wire x1="13.97" y1="11.43" x2="13.97" y2="2.286" width="0.8128" layer="16"/>
-<wire x1="27.94" y1="2.286" x2="27.94" y2="5.08" width="0.8128" layer="16"/>
-<wire x1="27.94" y1="5.08" x2="13.97" y2="5.08" width="0.8128" layer="16"/>
-<wire x1="13.97" y1="5.08" x2="13.97" y2="2.286" width="0.8128" layer="16"/>
-<wire x1="27.94" y1="2.286" x2="27.94" y2="7.366" width="0.8128" layer="16"/>
+<wire x1="31.12" y1="4.65" x2="31.12" y2="4.576" width="0.8128" layer="16"/>
+<wire x1="31.12" y1="4.576" x2="31.04" y2="1.996" width="0.8128" layer="16"/>
+<wire x1="16.58" y1="10.75" x2="16.58" y2="13.17" width="0.8128" layer="16"/>
+<wire x1="16.58" y1="13.17" x2="12.5" y2="13.25" width="0.8128" layer="16"/>
+<wire x1="12.5" y1="13.25" x2="10.25" y2="13.25" width="0.8128" layer="16"/>
+<wire x1="10.25" y1="13.25" x2="8" y2="15.5" width="0.8128" layer="16"/>
+<wire x1="8" y1="15.5" x2="6.04" y2="15.5" width="0.8128" layer="16"/>
+<wire x1="6.04" y1="15.5" x2="6" y2="15.46" width="0.8128" layer="16"/>
+<wire x1="16.58" y1="10.75" x2="16.54" y2="6.54" width="0.8128" layer="16"/>
+<wire x1="16.54" y1="6.54" x2="18.54" y2="4.65" width="0.8128" layer="16"/>
+<wire x1="18.54" y1="4.65" x2="18.54" y2="1.996" width="0.8128" layer="16"/>
+<wire x1="16.58" y1="13.17" x2="18.87" y2="15.46" width="0.8128" layer="16"/>
+<wire x1="18.87" y1="15.46" x2="20" y2="15.46" width="0.8128" layer="16"/>
+<wire x1="31.12" y1="7.096" x2="31.12" y2="4.65" width="0.8128" layer="16"/>
+<wire x1="31.12" y1="4.65" x2="18.54" y2="4.65" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="PROXIMITY" pad="2"/>
 <contactref element="R1" pad="1"/>
-<wire x1="22.86" y1="7.366" x2="22.86" y2="8.89" width="0.4064" layer="16"/>
-<wire x1="22.86" y1="8.89" x2="24.13" y2="10.16" width="0.4064" layer="16"/>
-<wire x1="24.13" y1="10.16" x2="26.67" y2="10.16" width="0.4064" layer="16"/>
-<wire x1="26.67" y1="10.16" x2="27.94" y2="11.43" width="0.4064" layer="16"/>
-<wire x1="27.94" y1="11.43" x2="27.94" y2="12.7" width="0.4064" layer="16"/>
+<wire x1="26.04" y1="7.096" x2="26" y2="9" width="0.4064" layer="16"/>
+<wire x1="26" y1="9" x2="27" y2="10" width="0.4064" layer="16"/>
+<wire x1="27" y1="10" x2="28.5" y2="10" width="0.4064" layer="16"/>
+<wire x1="28.5" y1="10" x2="29" y2="10.5" width="0.4064" layer="16"/>
+<wire x1="29" y1="10.5" x2="29" y2="11.96" width="0.4064" layer="16"/>
 </signal>
 <signal name="NLINK">
 <contactref element="WIFI_MODULE" pad="PWM_1"/>
 <contactref element="C1" pad="-"/>
-<wire x1="37.846" y1="24.13" x2="37.846" y2="28.254" width="0.4064" layer="16"/>
-<wire x1="37.846" y1="28.254" x2="36.73" y2="29.37" width="0.4064" layer="16"/>
+<wire x1="38.016" y1="20" x2="38" y2="25" width="0.4064" layer="16"/>
+<wire x1="38" y1="25" x2="36.9" y2="26" width="0.4064" layer="16"/>
 </signal>
 <signal name="A2">
 <contactref element="ARDUINO" pad="19"/>
-<contactref element="LEFT_LINE" pad="3"/>
+<contactref element="L-LINE" pad="3"/>
 <contactref element="R5" pad="2"/>
-<wire x1="10.16" y1="26.67" x2="10.16" y2="27.94" width="0.4064" layer="1"/>
-<wire x1="13.97" y1="30.48" x2="13.97" y2="43.18" width="0.4064" layer="1"/>
-<wire x1="13.97" y1="43.18" x2="17.78" y2="46.99" width="0.4064" layer="1"/>
-<wire x1="17.78" y1="46.99" x2="17.78" y2="48.16" width="0.4064" layer="1"/>
-<wire x1="10.16" y1="26.67" x2="10.16" y2="24.13" width="0.8128" layer="16"/>
-<wire x1="10.16" y1="24.13" x2="11.43" y2="22.86" width="0.8128" layer="16"/>
-<wire x1="13.97" y1="30.48" x2="12.7" y2="29.21" width="0.4064" layer="1"/>
-<wire x1="12.7" y1="29.21" x2="11.43" y2="29.21" width="0.4064" layer="1"/>
-<wire x1="11.43" y1="29.21" x2="10.16" y2="27.94" width="0.4064" layer="1"/>
+<wire x1="14.25" y1="26.5" x2="14.25" y2="39.25" width="0.4064" layer="1"/>
+<wire x1="14.25" y1="39.25" x2="18" y2="43" width="0.4064" layer="1"/>
+<wire x1="18" y1="43" x2="18" y2="44.02" width="0.4064" layer="1"/>
+<wire x1="14.25" y1="26.5" x2="11" y2="26.5" width="0.4064" layer="1"/>
+<wire x1="11" y1="26.5" x2="10.08" y2="25.58" width="0.4064" layer="1"/>
+<wire x1="10.08" y1="25.58" x2="10.08" y2="24" width="0.4064" layer="1"/>
+<wire x1="10.08" y1="24" x2="10.08" y2="21.96" width="0.8128" layer="16"/>
+<wire x1="10.08" y1="21.96" x2="11.5" y2="20.54" width="0.8128" layer="16"/>
 </signal>
 <signal name="D3">
 <contactref element="ARDUINO" pad="6"/>
 <contactref element="WIFI_MODULE" pad="PWM_2"/>
-<wire x1="36.93" y1="31.37" x2="35.94" y2="31.37" width="0.4064" layer="1"/>
-<wire x1="35.94" y1="31.37" x2="34.29" y2="33.02" width="0.4064" layer="1"/>
-<wire x1="34.29" y1="33.02" x2="34.29" y2="35.56" width="0.4064" layer="1"/>
-<wire x1="34.29" y1="35.56" x2="33.02" y2="36.83" width="0.4064" layer="1"/>
-<wire x1="33.02" y1="36.83" x2="33.02" y2="39.37" width="0.4064" layer="1"/>
-<wire x1="33.02" y1="39.37" x2="30.48" y2="41.91" width="0.4064" layer="1"/>
-<via x="30.48" y="41.91" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="30.48" y1="41.91" x2="20.32" y2="41.91" width="0.4064" layer="16"/>
-<via x="20.32" y="41.91" extent="1-16" drill="0.6" shape="square"/>
-<wire x1="20.32" y1="41.91" x2="17.78" y2="39.37" width="0.4064" layer="1"/>
-<wire x1="17.78" y1="39.37" x2="17.78" y2="32.92" width="0.4064" layer="1"/>
+<wire x1="37.1" y1="28" x2="35.5" y2="28" width="0.4064" layer="1"/>
+<wire x1="35.5" y1="28" x2="34.5" y2="29" width="0.4064" layer="1"/>
+<wire x1="34.5" y1="29" x2="34.5" y2="31" width="0.4064" layer="1"/>
+<wire x1="34.5" y1="31" x2="33.5" y2="32" width="0.4064" layer="1"/>
+<wire x1="33.5" y1="32" x2="33" y2="32" width="0.4064" layer="1"/>
+<via x="33" y="32" extent="1-16" drill="0.6"/>
+<wire x1="33" y1="32" x2="19" y2="32" width="0.4064" layer="16"/>
+<via x="19" y="32" extent="1-16" drill="0.6"/>
+<wire x1="19" y1="32" x2="18" y2="31" width="0.4064" layer="1"/>
+<wire x1="18" y1="31" x2="18" y2="28.78" width="0.4064" layer="1"/>
 </signal>
 <signal name="D12">
 <contactref element="ARDUINO" pad="15"/>
 <contactref element="WIFI_MODULE" pad="PWR_SW"/>
-<wire x1="36.93" y1="35.37" x2="35.75" y2="35.37" width="0.4064" layer="1"/>
-<wire x1="35.75" y1="35.37" x2="34.29" y2="36.83" width="0.4064" layer="1"/>
-<wire x1="34.29" y1="36.83" x2="34.29" y2="40.64" width="0.4064" layer="1"/>
-<wire x1="34.29" y1="40.64" x2="27.94" y2="46.99" width="0.4064" layer="1"/>
-<wire x1="27.94" y1="46.99" x2="27.94" y2="48.16" width="0.4064" layer="1"/>
+<wire x1="37.1" y1="32" x2="35.5" y2="32" width="0.4064" layer="1"/>
+<wire x1="35.5" y1="32" x2="34.5" y2="33" width="0.4064" layer="1"/>
+<wire x1="34.5" y1="33" x2="34.5" y2="36.5" width="0.4064" layer="1"/>
+<wire x1="34.5" y1="36.5" x2="28.16" y2="42.84" width="0.4064" layer="1"/>
+<wire x1="28.16" y1="42.84" x2="28.16" y2="44.02" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$6">
 <contactref element="R6" pad="1"/>
-<contactref element="LEFT_LINE" pad="2"/>
-<wire x1="7.62" y1="26.416" x2="7.62" y2="24.13" width="0.8128" layer="16"/>
-<wire x1="7.62" y1="24.13" x2="6.35" y2="22.86" width="0.8128" layer="16"/>
+<contactref element="L-LINE" pad="2"/>
+<wire x1="7.54" y1="23.746" x2="7.54" y2="22.08" width="0.8128" layer="16"/>
+<wire x1="7.54" y1="22.08" x2="6" y2="20.54" width="0.8128" layer="16"/>
 </signal>
 <signal name="N$7">
-<contactref element="RIGHT_LINE" pad="2"/>
+<contactref element="R-LINE" pad="2"/>
 <contactref element="R8" pad="1"/>
-<wire x1="21.59" y1="26.416" x2="21.59" y2="24.13" width="0.8128" layer="16"/>
-<wire x1="21.59" y1="24.13" x2="20.32" y2="22.86" width="0.8128" layer="16"/>
+<wire x1="21.59" y1="23.686" x2="21.59" y2="22.4" width="0.8128" layer="16"/>
+<wire x1="21.59" y1="22.4" x2="20" y2="20.54" width="0.8128" layer="16"/>
+</signal>
+<signal name="BAT_IN">
+<contactref element="BATTERY" pad="2"/>
+<contactref element="POWER" pad="COMMON"/>
+<wire x1="4.5" y1="7.45" x2="4.55" y2="7.45" width="0.8128" layer="16"/>
+<wire x1="4.55" y1="7.45" x2="7.5" y2="4.5" width="0.8128" layer="16"/>
+<wire x1="7.5" y1="4.5" x2="9" y2="4.5" width="0.8128" layer="16"/>
+<wire x1="9" y1="4.5" x2="8.9" y2="4.5" width="0" layer="19" extent="16-16"/>
+<wire x1="4.627" y1="7.45" x2="4.55" y2="7.45" width="0" layer="19" extent="16-16"/>
 </signal>
 </signals>
 </board>
