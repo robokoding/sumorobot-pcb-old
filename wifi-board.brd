@@ -127,9 +127,8 @@
 <board>
 <plain>
 <wire x1="2.5" y1="0" x2="47.5" y2="0" width="0" layer="20"/>
-<wire x1="50" y1="2.5" x2="50" y2="43.5" width="0" layer="20"/>
 <wire x1="47.5" y1="46" x2="2.5" y2="46" width="0" layer="20"/>
-<text x="48.5" y="25" size="1.016" layer="21" font="vector" ratio="12" rot="R90">Wi-Fi board v1.0</text>
+<text x="48.5" y="25" size="1.016" layer="21" font="vector" ratio="12" rot="R90">Wi-Fi board v0.1</text>
 <wire x1="0" y1="43.5" x2="0" y2="2.5" width="0" layer="20"/>
 <wire x1="50" y1="2.5" x2="47.5" y2="0" width="0" layer="20" curve="-90"/>
 <wire x1="2.5" y1="0" x2="0" y2="2.5" width="0" layer="20" curve="-90"/>
