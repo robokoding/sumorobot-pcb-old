@@ -8,6 +8,12 @@ The Eagle CAD files for the RoboKoding WI-FI PCB
 <img height="240px" src="https://lh5.googleusercontent.com/-S1ZMFItLRUU/VKlP2Qt8gbI/AAAAAAAAJyA/RNRSHXsNOFo/w1256-h939-no/wifi.JPG" alt="pcbs">
 <img height="240px" src="https://lh6.googleusercontent.com/-2j2UzxWQJAg/VKlQtLg_jiI/AAAAAAAAJyI/geS3OZChEzY/w1000-h667-no/jo.jpg" alt="assembled">
 
+assembly instructions
+=====================
+<img height="200px" src="" alt="assembly">
+<img height="200px" src="" alt="assembly">
+<img height="200px" src="" alt="assembly">
+
 credits ^_^
 ===========
 * https://github.com/bjpirt/mirobot-pcb
