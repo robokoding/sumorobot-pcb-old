@@ -10,9 +10,18 @@ The Eagle CAD files for the RoboKoding WI-FI PCB
 
 assembly instructions
 =====================
-<img height="200px" src="" alt="assembly">
-<img height="200px" src="" alt="assembly">
-<img height="200px" src="" alt="assembly">
+<img height="250px" src="https://lh5.googleusercontent.com/-FnjOeRkDq5Y/VKlUIWROPDI/AAAAAAAAJ1o/IIl1PwkjROE/w500-h334-no/500_step0.JPG" alt="assembly">
+<img height="250px" src="https://lh6.googleusercontent.com/-ABPWlJsIZ1c/VKlUA0kt73I/AAAAAAAAJ1g/eJEwkYATU-s/w500-h334-no/500_step1.JPG" alt="assembly">
+<img height="250px" src="https://lh6.googleusercontent.com/-unFbT19m51k/VKlUDvfKhlI/AAAAAAAAJ1A/X579EDRljaA/w500-h334-no/500_step2.JPG" alt="assembly">
+<img height="250px" src="https://lh3.googleusercontent.com/-2SM-v5g7UsA/VKlUD6g4bJI/AAAAAAAAJ08/LvvDv5e_6DY/w500-h334-no/500_step3.JPG" alt="assembly">
+<img height="250px" src="https://lh3.googleusercontent.com/-2SM-v5g7UsA/VKlUD6g4bJI/AAAAAAAAJ08/LvvDv5e_6DY/w500-h334-no/500_step3.JPG" alt="assembly">
+<img height="250px" src="https://lh4.googleusercontent.com/-IkpG7IOmMcU/VKlUEBW-yUI/AAAAAAAAJ04/sA8SecWQgLI/w500-h334-no/500_step4.JPG" alt="assembly">
+<img height="250px" src="https://lh3.googleusercontent.com/-bWydUBs6Cgw/VKlUEVsW5zI/AAAAAAAAJ0w/k0NbZ3xYzDA/w500-h334-no/500_step5.JPG" alt="assembly">
+<img height="250px" src="https://lh6.googleusercontent.com/-fw_OTRh0uIM/VKlUEp14g3I/AAAAAAAAJ0g/bXAnFvwR044/w500-h334-no/500_step6.JPG" alt="assembly">
+<img height="250px" src="https://lh6.googleusercontent.com/-QTG7WZC1x2c/VKlUE1GLQVI/AAAAAAAAJ0s/hlH_sHhljys/w500-h334-no/500_step7.JPG" alt="assembly">
+<img height="250px" src="" alt="assembly">
+<img height="250px" src="" alt="assembly">
+<img height="250px" src="" alt="assembly">
 
 credits ^_^
 ===========
