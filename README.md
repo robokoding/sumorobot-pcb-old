@@ -8,6 +8,26 @@ The Eagle CAD files for the RoboKoding WI-FI PCB
 <img height="245px" src="https://lh5.googleusercontent.com/-S1ZMFItLRUU/VKlP2Qt8gbI/AAAAAAAAJyA/RNRSHXsNOFo/w1256-h939-no/wifi.JPG" alt="pcbs">
 <img height="245px" src="https://lh6.googleusercontent.com/-2j2UzxWQJAg/VKlQtLg_jiI/AAAAAAAAJyI/geS3OZChEzY/w1000-h667-no/jo.jpg" alt="assembled">
 
+bill of materials
+=================
+ebay
+----
+* 1 x [switch](http://www.ebay.com/itm/201095465543)
+* 1 x [24 pin socket](http://www.ebay.com/itm/221128614182)
+* 1 x [USR-WIFI-T module](http://www.ebay.com/itm/251594619856)
+* 1 x [3 AA battery holder](http://www.ebay.com/itm/310602601417)
+* 1 x [5V step-up converter](http://www.ebay.com/itm/330846857152)
+* 1 x [Pro Mini or Pro Micro](http://www.ebay.com/itm/231368307663)
+* 1 x [2mm female pin headers](http://www.ebay.com/itm/181108690201)
+
+local electronics store
+-----------------------
+* 2 x 220Ω resistor
+* 2 x 10kΩ resistor
+* 1 x 1k8Ω resistor
+* 1 x 3k3Ω resistor
+* some pin headers
+
 assembly instructions
 =====================
 <img height="235px" src="https://lh5.googleusercontent.com/-FnjOeRkDq5Y/VKlUIWROPDI/AAAAAAAAJ1o/IIl1PwkjROE/w500-h334-no/500_step0.JPG" alt="assembly">
