@@ -34,3 +34,4 @@ assembly instructions
 credits ^_^
 ===========
 * https://github.com/bjpirt/mirobot-pcb
+* https://github.com/sparkfun/SparkFun-Eagle-Libraries
