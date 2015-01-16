@@ -51,6 +51,10 @@ assembly instructions
 <img height="235px" src="https://lh6.googleusercontent.com/-d0Wdho36s7A/VKlUDCH-nZI/AAAAAAAAJ1I/B5aFSCQ8_zE/w500-h334-no/500_step17.JPG" alt="assembly">
 <img height="235px" src="https://lh4.googleusercontent.com/-sowdf2N8CLs/VKlUDOHYhDI/AAAAAAAAJ1E/h1sCihFYWrs/w500-h334-no/500_step18.JPG" alt="assembly">
 
+documentation
+=============
+[USR-WIFI232-T](http://www.usriot.com/Down/WIFI/USR-WIFI232%20Low%20Power%20WiFi%20Module%20User%20Manual%20V2.4.pdf)
+
 credits ^_^
 ===========
 * https://github.com/bjpirt/mirobot-pcb
