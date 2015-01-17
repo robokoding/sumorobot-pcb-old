@@ -53,7 +53,7 @@ assembly instructions
 
 documentation
 =============
-[USR-WIFI232-T](http://www.usriot.com/Down/WIFI/USR-WIFI232%20Low%20Power%20WiFi%20Module%20User%20Manual%20V2.4.pdf)
+http://www.usriot.com/Product/82.html
 
 credits ^_^
 ===========
