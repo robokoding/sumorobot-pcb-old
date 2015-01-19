@@ -54,6 +54,7 @@ assembly instructions
 documentation
 =============
 http://www.usriot.com/Product/82.html
+http://dangerousprototypes.com/docs/Get_your_PCBs_made
 
 credits ^_^
 ===========
