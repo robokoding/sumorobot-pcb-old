@@ -1,4 +1,4 @@
-sumoboard-pcb
+sumorobot-pcb
 =============
 
 The Eagle CAD files for the RoboKoding Sumoboard PCB
