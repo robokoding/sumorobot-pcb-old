@@ -3,8 +3,8 @@ sumorobot-pcb
 
 The Eagle CAD files for the RoboKoding Sumoboard PCB
 
-<img height="250px" src="https://scontent-a.xx.fbcdn.net/hphotos-xfa1/l/t31.0-8/1911033_744753555579882_617911410563203580_o.png" alt="scheamtics">
-<img height="250px" src="https://scontent-a.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/10675593_744753562246548_9066968778911001495_n.png?oh=47adae9cc96a6235c9060c4ad4f6b964&oe=54D9BA69" alt="board">
+<img height="250px" src="https://lh3.googleusercontent.com/-F2f4YxSJmlM/VMmQyFLp41I/AAAAAAAAKWA/ltKXCzUDbUI/w1518-h848-no/sumoboard_sch.png" alt="scheamtics">
+<img height="250px" src="https://lh3.googleusercontent.com/-W4scVU_6FAG2uHtWU6c6pkVAn-WxOjq_qGG-cTjDOg=w964-h893-no" alt="board">
 <img height="245px" src="https://lh5.googleusercontent.com/-S1ZMFItLRUU/VKlP2Qt8gbI/AAAAAAAAJyA/RNRSHXsNOFo/w1256-h939-no/wifi.JPG" alt="pcbs">
 <img height="245px" src="https://lh6.googleusercontent.com/-2j2UzxWQJAg/VKlQtLg_jiI/AAAAAAAAJyI/geS3OZChEzY/w1000-h667-no/jo.jpg" alt="assembled">
 
