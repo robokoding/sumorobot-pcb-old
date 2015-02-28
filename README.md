@@ -58,5 +58,6 @@ http://dangerousprototypes.com/docs/Get_your_PCBs_made
 
 credits ^_^
 ===========
+* https://github.com/bsalinas/huejs
 * https://github.com/bjpirt/mirobot-pcb
 * https://github.com/sparkfun/SparkFun-Eagle-Libraries
